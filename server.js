@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+require("dotenv").config({ path: ".env" });
 
 const app = express();
 
@@ -16,6 +17,9 @@ app.use(
     console.log("it's working");
     res.send('success received!') 
   });
-  app.listen(3002, () => {
+  app.listen(process.env.PORT, () => {
+    console.log("Port: ", process.env.PORT)
     console.log('Server started!');
     });
+
+    module.exports = app
