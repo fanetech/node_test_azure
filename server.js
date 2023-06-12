@@ -19,5 +19,3 @@ app.use(
   app.listen(3002, () => {
     console.log('Server started!');
     });
-
-export default app;
